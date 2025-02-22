@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">p01_petShop</string>
+    <string name="intro_title">
+        <font color="#000000"> Unveiling a World</font>
+        <font color="#008b86">\nToys &amp; Accessories &amp; Foods\n</font>
+        <font color="#000000"> For Your Pet</font>
+    </string>
+    <string name="intro_text">Browse the latest styles from top brands\nGet personalized recommendations\n Enjoy fast, free shipping </string>
+
+    <string name="intro_signin">
+        Already have an acount?
+        <font color="#008b86">Sign In</font>
+    </string>
+</resources>
