@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.P01_petShop" parent="Base.Theme.P01_petShop" />
+    <style name="Theme.P01_petShop" parent="Base.Theme.P01_petShop">
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
 </resources>
