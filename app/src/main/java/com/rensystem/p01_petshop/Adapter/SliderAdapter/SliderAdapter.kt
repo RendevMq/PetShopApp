@@ -1,12 +1,8 @@
-package com.rensystem.p01_petshop.Adapter
+package com.rensystem.p01_petshop.Adapter.SliderAdapter
 
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Recycler
-import androidx.viewpager2.widget.ViewPager2
 import com.rensystem.p01_petshop.Model.SliderModel
 import com.rensystem.p01_petshop.R
 

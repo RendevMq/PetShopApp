@@ -1,4 +1,4 @@
-package com.rensystem.p01_petshop.Adapter
+package com.rensystem.p01_petshop.Adapter.SliderAdapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

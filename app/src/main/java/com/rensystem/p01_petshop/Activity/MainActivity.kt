@@ -3,15 +3,21 @@ package com.rensystem.p01_petshop.Activity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
-import com.rensystem.p01_petshop.Adapter.SliderAdapter
+import com.rensystem.p01_petshop.Adapter.BestSellerAdapter.BestSellerAdapter
+import com.rensystem.p01_petshop.Adapter.CategoryAdapter.CategoryAdapter
+import com.rensystem.p01_petshop.Adapter.SliderAdapter.SliderAdapter
+import com.rensystem.p01_petshop.Model.CategoryModel
 import com.rensystem.p01_petshop.Model.SliderModel
 import com.rensystem.p01_petshop.ViewModel.MainViewModel
 import com.rensystem.p01_petshop.databinding.ActivityMainBinding
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 class MainActivity : BaseActivity() {
 
@@ -30,6 +36,38 @@ class MainActivity : BaseActivity() {
 
         // Se inicializa el slider de banners
         initBanner()
+        initCategories()
+        initBestSeller()
+    }
+
+    private fun initBestSeller() {
+        binding.progressBarBestSeller.visibility = View.VISIBLE
+
+        lifecycleScope.launch {
+            viewModel.bestSeller.collect() { items ->
+                binding.viewBestSeller.layoutManager =
+                    GridLayoutManager(this@MainActivity, 2, LinearLayoutManager.VERTICAL, false)
+                binding.viewBestSeller.adapter = BestSellerAdapter(items)
+                binding.progressBarBestSeller.visibility = View.GONE
+            }
+        }
+        viewModel.loadBestSeller()// Se carga la lista de productos más vendidos
+    }
+
+    private fun initCategories() {
+        binding.progressBarCategory.visibility = View.VISIBLE
+
+        viewModel.category.observe(this) {
+            binding.viewCategory.layoutManager =
+//                LinearLayoutManager(
+//                    this@MainActivity,
+//                    LinearLayoutManager.HORIZONTAL, false
+//                )
+                GridLayoutManager(this@MainActivity, it.size, GridLayoutManager.VERTICAL, false)
+            binding.viewCategory.adapter = CategoryAdapter(it)
+            binding.progressBarCategory.visibility = View.GONE
+        }
+        viewModel.loadCategory()
     }
 
     // Metodo que maneja la carga de banners
