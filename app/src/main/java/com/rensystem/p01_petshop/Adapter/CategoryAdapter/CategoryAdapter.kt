@@ -13,6 +13,7 @@ import com.rensystem.p01_petshop.databinding.ItemViewholderCategoryBinding
 class CategoryAdapter(private val items: MutableList<CategoryModel>) :
     RecyclerView.Adapter<CategoryViewHolder>() {
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
         val layout = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_viewholder_category, parent, false)

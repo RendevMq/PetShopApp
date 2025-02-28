@@ -1,10 +1,12 @@
 package com.rensystem.p01_petshop.Adapter.BestSellerAdapter
 
+import android.content.Intent
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
+import com.rensystem.p01_petshop.Activity.DetailActivity
 import com.rensystem.p01_petshop.Model.ItemsModel
 import com.rensystem.p01_petshop.databinding.ItemViewholderBestsellerBinding
 
@@ -23,6 +25,12 @@ class BestSellerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             .load(item.picUrl[0])
             .apply(requestOption)
             .into(binding.picBestSeller)
+
+        binding.root.setOnClickListener {
+            val intent = Intent(binding.root.context, DetailActivity::class.java)
+            intent.putExtra("object" , item)
+            binding.root.context.startActivity(intent)
+        }
     }
 
 }
