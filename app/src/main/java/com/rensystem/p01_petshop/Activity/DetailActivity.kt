@@ -80,6 +80,11 @@ class DetailActivity : BaseActivity() {
             startActivity(intent)
         }
 
+        //Boton icono ir carrito
+        binding.cartBtn.setOnClickListener{
+            startActivity(Intent(this@DetailActivity , CartActivity::class.java))
+        }
+
     }
 
 

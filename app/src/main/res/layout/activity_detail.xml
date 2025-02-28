@@ -201,7 +201,7 @@
                     android:textSize="18sp"/>
 
                 <ImageButton
-                    android:id="@+id/imageView14"
+                    android:id="@+id/cartBtn"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@drawable/grey_circle_bg"

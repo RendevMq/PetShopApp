@@ -33,7 +33,7 @@
                 android:paddingTop="48dp">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/btnBack"
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"

@@ -1,5 +1,6 @@
 package com.rensystem.p01_petshop.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -38,6 +39,13 @@ class MainActivity : BaseActivity() {
         initBanner()
         initCategories()
         initBestSeller()
+        bottomNavigation()
+    }
+
+    private fun bottomNavigation() {
+        binding.cartBtn.setOnClickListener {
+            startActivity(Intent(this,CartActivity::class.java))
+        }
     }
 
     private fun initBestSeller() {
