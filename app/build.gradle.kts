@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("kotlin-kapt")
+    alias(libs.plugins.daggerhiltandroid)
 }
 
 android {
@@ -56,6 +58,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 
+    implementation(libs.daggerhiltandroid)
+    kapt(libs.daggerhiltcompiler)
 // ViewModel
     implementation("androidx.activity:activity-ktx:1.4.0")
     implementation("com.github.bumptech.glide:glide:4.12.0")
