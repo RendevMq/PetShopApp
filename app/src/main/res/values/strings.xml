@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">p01_petShop</string>
+
+
+<!--    My Intro Screen-->
     <string name="intro_title">
         <font color="#000000"> Unveiling a World</font>
         <font color="#008b86">\nToys &amp; Accessories &amp; Foods\n</font>
@@ -11,4 +14,56 @@
         Already have an acount?
         <font color="#008b86">Sign In</font>
     </string>
+
+    <string name="intro_image_description">intro image description</string>
+    <string name="lets_get_started_btn">Lets Get Started</string>
+
+<!--    My cart Screen-->
+    <string name="your_cart_is_empty">Your Cart is Empty</string>
+    <string name="my_cart">My Cart</string>
+    <string name="enter_your_copoun">Enter Your Copoun</string>
+    <string name="applyBtn">Apply</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="delivery">Delivery</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="noTotal">$-</string>
+    <string name="totalCart">Total</string>
+    <string name="check_out_btn">Check Out</string>
+
+<!--    My Detail Product Screen-->
+    <string name="back_button_description">back button description</string>
+    <string name="favourite_button_description">favourite button description</string>
+    <string name="main_image_product_description">main image product description</string>
+    <string name="pruduct_price">$0</string>
+    <string name="seller_image_description">seller image description</string>
+    <string name="seller_name">Seller</string>
+    <string name="message_icon_description">message icon description</string>
+    <string name="phonecall_icon_description">phonecall icon description</string>
+    <string name="select_size_product">Select Size</string>
+    <string name="product_stars_description">product stars</string>
+    <string name="product_stars_number">0</string>
+    <string name="add_to_cart_btn">Add to Cart</string>
+    <string name="cart_icon_description">cart icon description</string>
+
+<!--    Main - Home screen-->
+
+    <string name="welcome">Welcome</string>
+    <string name="tom_jhonson_user">Tom Jhonson</string>
+    <string name="notificacion_icon_description">notificacion icon description</string>
+    <string name="notification_number_icon_description">notification number icon description</string>
+    <string name="search_anything_placeholder">Search anything…</string>
+    <string name="categories">Categories</string>
+    <string name="see_all">See All</string>
+    <string name="best_seller_product">Best Seller Product</string>
+    <string name="profile">Profile</string>
+    <string name="my_order">My Order</string>
+    <string name="my_order_icon_description">My Order Icon Description</string>
+    <string name="wishlist">WishList</string>
+    <string name="icon_wishlist_description">icon wishlist description</string>
+    <string name="cart_icon_description_main">cart icon description</string>
+    <string name="cart">Cart</string>
+    <string name="explorer">Explorer</string>
+    <string name="explorer_icon_description">explorer icon</string>
+
+
 </resources>

@@ -76,10 +76,6 @@ class MainActivity : BaseActivity() {
         viewModel.loadBestSeller()
     }
 
-
-
-
-
     private fun initCategories() {
         binding.progressBarCategory.visibility = View.VISIBLE
 
