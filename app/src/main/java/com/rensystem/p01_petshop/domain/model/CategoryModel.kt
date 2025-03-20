@@ -1,5 +1,6 @@
 package com.rensystem.p01_petshop.domain.model
 
+import com.google.gson.annotations.SerializedName
 import com.rensystem.p01_petshop.data.model.CategoryDataModel
 
 data class CategoryModel(

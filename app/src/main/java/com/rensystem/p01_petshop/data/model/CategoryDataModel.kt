@@ -3,12 +3,10 @@ package com.rensystem.p01_petshop.data.model
 import com.google.gson.annotations.SerializedName
 
 data class CategoryDataModel(
-    @SerializedName("title")
+    @SerializedName("titlePet")
     val title: String = "",
 
-    @SerializedName("id")
     val id: Int = 0,
 
-    @SerializedName("pic_url")
     val picUrl: String = ""
 )
