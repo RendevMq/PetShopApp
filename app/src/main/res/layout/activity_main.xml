@@ -5,7 +5,7 @@
     android:id="@+id/viewPicList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity">
+    tools:context=".ui.home.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                         android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Welcome"
+                        android:text="@string/welcome"
                         android:textColor="@color/white"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
                         android:id="@+id/textView5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tom Jhonson"
+                        android:text="@string/tom_jhonson_user"
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +54,7 @@
                         android:layout_height="26dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/notificacion_icon_description"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/bell" />
@@ -62,6 +63,7 @@
                         android:id="@+id/imageView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:contentDescription="@string/notification_number_icon_description"
                         app:layout_constraintBottom_toTopOf="@+id/imageView2"
                         app:layout_constraintEnd_toEndOf="@+id/imageView2"
                         app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -94,7 +96,7 @@
                     android:drawableStart="@drawable/search_icon"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="Search anything..."
+                    android:hint="@string/search_anything_placeholder"
                     android:inputType="text"
                     android:padding="8dp"
                     android:textColor="@color/grey"
@@ -152,10 +154,10 @@
 
                 <TextView
                     android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Categories"
+                    android:text="@string/categories"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -163,7 +165,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="See All"
+                    android:text="@string/see_all"
                     android:textColor="@color/green" />
             </LinearLayout>
 
@@ -202,17 +204,17 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Best Seller Product"
+                    android:text="@string/best_seller_product"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="See All"
+                    android:text="@string/see_all"
                     android:textColor="@color/green" />
             </LinearLayout>
 
@@ -262,7 +264,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical">
+                android:layout_gravity="center_vertical"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -276,6 +279,7 @@
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
+                        android:contentDescription="@string/explorer_icon_description"
                         app:srcCompat="@drawable/btn_1" />
 
                     <TextView
@@ -283,10 +287,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Explorer"
+                        android:text="@string/explorer"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -301,16 +306,18 @@
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
+                        android:contentDescription="@string/cart_icon_description_main"
                         app:srcCompat="@drawable/btn_2" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Cart"
+                        android:text="@string/cart"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -324,16 +331,18 @@
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
+                        android:contentDescription="@string/icon_wishlist_description"
                         app:srcCompat="@drawable/btn_3" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="WishList"
+                        android:text="@string/wishlist"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -347,16 +356,18 @@
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
+                        android:contentDescription="@string/my_order_icon_description"
                         app:srcCompat="@drawable/btn_4" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="My Order"
+                        android:text="@string/my_order"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -370,16 +381,18 @@
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
+                        android:contentDescription="profile icon description"
                         app:srcCompat="@drawable/btn_5" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="Profile"
+                        android:text="@string/profile"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
                 </LinearLayout>
 
 
