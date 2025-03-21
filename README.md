@@ -1,6 +1,6 @@
 # 📱 PeShop - Aplicación de Productos
 
-**PeShop** es una aplicación móvil desarrollada en **Kotlin** utilizando **MVVM** y **Clean Architecture**. La aplicación obtiene información sobre productos desde **Firebase Realtime Database** y almacena el carrito de compras localmente utilizando **TinyDB**.
+**PeShop** es una aplicación móvil desarrollada en **Kotlin** utilizando **MVVM** y **Clean Architecture**. La aplicación obtiene información sobre productos desde **Firebase Realtime Database** y almacena el carrito de compras localmente utilizando **SharedPreferences**.
 
 <p align="center">
   <img src="img.png" alt="reto" width="1000"/>
@@ -12,7 +12,8 @@
 
 ✅ Banner deslizable para mostrar productos destacados o promociones.
 
-✅ Gestión del carrito de compras utilizando **TinyDB** (almacenamiento local).
+✅ Gestión del carrito de compras utilizando [**TinyDB**](https://github.com/kcochibili/TinyDB--Android-Shared-Preferences-Turbo) (almacenamiento local).
+
 
 ✅ **Firebase Realtime Database** para obtener información sobre los productos (como nombres, descripciones, precios, etc.).
 
@@ -22,17 +23,17 @@
 
 ## ⚙️ Tecnologías y Librerías
 
-| Tecnologías / Librerías | Descripción |
-| --- | --- |
-| **Kotlin** | Lenguaje principal de desarrollo. |
-| **MVVM (ViewModel, LiveData/StateFlow)** | Arquitectura utilizada para separación de lógica. |
-| **Hilt** | Inyección de dependencias. |
-| **Coroutines / Flow** | Manejo de datos en segundo plano. |
+| Tecnologías / Librerías | Descripción                                                                   |
+| --- |-------------------------------------------------------------------------------|
+| **Kotlin** | Lenguaje principal de desarrollo.                                             |
+| **MVVM (ViewModel, LiveData/StateFlow)** | Arquitectura utilizada para separación de lógica.                             |
+| **Hilt** | Inyección de dependencias.                                                    |
+| **Coroutines / Flow** | Manejo de datos en segundo plano.                                             |
 | **Firebase Realtime Database** | Base de datos en tiempo real utilizada para obtener información de productos. |
-| **Firebase Storage** | Almacenamiento en la nube para imágenes de productos. |
-| **TinyDB** | Almacenamiento local para el carrito de compras. |
-| **Glide** | Carga de imágenes eficiente. |
-| **RecyclerView** | Listado dinámico para productos y categorías. |
+| **Firebase Storage** | Almacenamiento en la nube para imágenes de productos.                         |
+| **TinyDB** | Almacenamiento local para el carrito de compras (SharedPreferences).                           |
+| **Glide** | Carga de imágenes eficiente.                                                  |
+| **RecyclerView** | Listado dinámico para productos y categorías.                                 |
 
 ---
 
@@ -59,7 +60,7 @@ cd PeShop
 
 ### **4️⃣ Configuración de TinyDB**
 
-- **TinyDB** se utiliza para almacenar el carrito de compras localmente. No es necesario hacer configuración adicional para esta funcionalidad.
+- **TinyDB** se utiliza para almacenar el carrito de compras localmente.  Descarga e importa la clase desde el [repositorio de TinyDB](https://github.com/kcochibili/TinyDB--Android-Shared-Preferences-Turbo). No se requiere configuración adicional.
 
 ### **5️⃣ Compilar y ejecutar**
 
